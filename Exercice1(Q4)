@@ -1,0 +1,20 @@
+from PySide2.QtWidgets import QLabel,QWidget,QPushButton,QApplication,QVBoxLayout,QProgressBar
+
+class Window(QWidget):
+    def __init__(self):
+        QWidget.__init__(self)
+
+        self.__layout = QVBoxLayout()
+        self.__Boutton = QPushButton('Homme')
+        self.__Boutton2 = QPushButton('Femme')
+
+        self.__layout.addWidget(self.__Boutton)
+        self.__layout.addWidget(self.__Boutton2)
+
+        self.setLayout(self.__layout)
+
+if __name__ == "__main__":
+   app = QApplication([])
+   win = Window()
+   win.show()
+   app.exec_()
